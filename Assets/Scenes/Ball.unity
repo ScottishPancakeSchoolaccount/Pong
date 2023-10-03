@@ -312,8 +312,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49b4b52a7ced8b40871ecb14bdbc090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xPosition: 2
-  yPosition: 2
+  xPosition: -3.56
+  yPosition: -3.9
+  xSpeed: 1
+  ySpeed: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
