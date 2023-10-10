@@ -14,12 +14,10 @@ public class paddle : MonoBehaviour
         // Update is called once per frame
         if (Input.GetKey(up) && transform.position.y < maxValue) //max value is the max hight it can go
         {
-            Debug.Log("Mega W key -Pancake");
             transform.Translate(Vector3.up * speed * Time.deltaTime); //movement up
         }
         else if (Input.GetKey(down) && transform.position.y > -maxValue)
         {
-            Debug.Log("the S key bruddah");
             transform.Translate(Vector3.down * speed * Time.deltaTime); //movement down
 
         }

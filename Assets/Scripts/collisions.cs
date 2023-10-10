@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class collisions : MonoBehaviour
@@ -8,6 +9,17 @@ public class collisions : MonoBehaviour
     public float yPosition = 1f;
     public float xSpeed = 10f;
     public float ySpeed = 10f;
+    public TMP_Text scoreField;
+    public int leftScore = 0;
+    public int rightScore = 0;
+
+    //function
+    void resetBall()
+    {
+        xPosition = 0f;
+        yPosition = 0f;
+        xSpeed = xSpeed * -1f;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -27,13 +39,27 @@ public class collisions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("horrizontalWall"))
         {
-            Debug.Log("Ouch my head!");
-            ySpeed = ySpeed * -1f; 
-        } 
-        else if (collision.gameObject.CompareTag("verticalWall"))
+            ySpeed = ySpeed * -1f;
+        }
+       // else if (collision.gameObject.CompareTag("verticalWall"))
+      //  {
+      //      xSpeed = xSpeed * -1f;
+     //   }
+        else if (collision.gameObject.CompareTag("verticalWallLeft"))
         {
-            Debug.Log("Ouch my butt!");
-            xSpeed = xSpeed * -1f;
+           resetBall();
+            rightScore++;
+            scoreField.text = leftScore + " - " + rightScore;
+        }
+        else if (collision.gameObject.CompareTag("verticalWallRight"))
+        {
+            resetBall();
+            leftScore++;
+            scoreField.text = leftScore + " - " + rightScore;
+        }
+        else if  (collision.gameObject.CompareTag("player"))
+        {
+            xSpeed = xSpeed * -1.5f;
         }
     }
 }
