@@ -8,6 +8,7 @@ TagManager:
   - verticalWall
   - verticalWallLeft
   - verticalWallRight
+  - player
   layers:
   - Default
   - TransparentFX

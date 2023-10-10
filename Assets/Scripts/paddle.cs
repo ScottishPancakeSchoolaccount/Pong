@@ -28,10 +28,12 @@ public class paddle : MonoBehaviour
         if (leftOrRight == "left")
         {
             paddleControl(KeyCode.W, KeyCode.S);
-        } else if (leftOrRight == "right")
+        } 
+        else if (leftOrRight == "right")
         {
             paddleControl(KeyCode.UpArrow, KeyCode.DownArrow);
         }
+
     }
 }
 

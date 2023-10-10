@@ -12,13 +12,15 @@ public class collisions : MonoBehaviour
     public TMP_Text scoreField;
     public int leftScore = 0;
     public int rightScore = 0;
+    public int topScore = 5; 
 
     //function
     void resetBall()
     {
         xPosition = 0f;
-        yPosition = 0f;
-        xSpeed = xSpeed * -1f;
+        yPosition = Random.Range(-4f, 4f);
+        xSpeed = 1f;
+        ySpeed = 1f;
     }
 
     // Start is called before the first frame update
@@ -34,6 +36,18 @@ public class collisions : MonoBehaviour
         //xPosition += xSpeed * Time.deltaTime; shorter way to do the same thing 
         yPosition = yPosition + ySpeed * Time.deltaTime;
         transform.position = new Vector3(xPosition, yPosition, 0f);
+        if(leftScore >= 5)
+        {
+            scoreField.text = "Left player has won!";
+            xPosition = 0f;
+            yPosition = 0f;
+        }
+        else if(rightScore >= 5)
+        {
+            scoreField.text = "Right player has won!";
+            xPosition = 0f;
+            yPosition = 0f;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -59,7 +73,7 @@ public class collisions : MonoBehaviour
         }
         else if  (collision.gameObject.CompareTag("player"))
         {
-            xSpeed = xSpeed * -1.5f;
+            xSpeed = xSpeed * -1.1f;
         }
     }
 }
