@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class loadScene : MonoBehaviour
 {
-    void loadTwoScene()
+  public  void loadTwoScene()
     {
-        SceneManager.LoadScene("pong basic");
+        SceneManager.LoadScene("Two players");
     }
-    void loadBotScene()
+   public void loadBotScene()
     {
-        SceneManager.LoadScene("pong bot");
+        SceneManager.LoadScene("Single player");
+    }
+  public  void loadSecretScene()
+    {
+        SceneManager.LoadScene("Secret mode");
     }
 
 }

@@ -19,8 +19,8 @@ public class collisions : MonoBehaviour
     {
         xPosition = 0f;
         yPosition = Random.Range(-4f, 4f);
-        xSpeed = 1f;
-        ySpeed = 1f;
+        xSpeed = 2f;
+        ySpeed = 2f;
     }
 
     // Start is called before the first frame update
@@ -72,6 +72,10 @@ public class collisions : MonoBehaviour
             scoreField.text = leftScore + " - " + rightScore;
         }
         else if  (collision.gameObject.CompareTag("player"))
+        {
+            xSpeed = xSpeed * -1.1f;
+        }
+        else if (collision.gameObject.CompareTag("verticalWall"))
         {
             xSpeed = xSpeed * -1.1f;
         }

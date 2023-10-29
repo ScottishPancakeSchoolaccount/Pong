@@ -7,6 +7,7 @@ public class paddle : MonoBehaviour
     //making variables to move the paddle
     public float speed = 4f;  //public float limit = 3.5f; 
     public string leftOrRight;
+    public string upOrDown;
     public float maxValue = 3.8f;
 
     void paddleControl(KeyCode up,KeyCode down)

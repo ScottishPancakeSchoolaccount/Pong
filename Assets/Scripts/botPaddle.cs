@@ -14,23 +14,21 @@ public class botPaddle : MonoBehaviour
     {
 
     }
-
-    //    Update is called once per frame
+    //Update is called once per frame
     void Update()
     {
         yPosition = yPosition + ySpeed * Time.deltaTime;
-        transform.position = new Vector3(transform.position.x, yPosition, 0f);
+      //  transform.position = new Vector3(transform.position.x, yPosition, 0f);
+        transform.position = new Vector3(transform.position.x, ball.transform.position.y, 0f);
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("horizontalwall"))
+        if (collision.gameObject.CompareTag("player"))
         {
-            ySpeed = ySpeed * -1f;
+            ySpeed = ySpeed * -1f; 
         }
     }
 }
-//private void Update()
-//    {
-//        transform.position = new Vector3(transform.position.x, ball.transform.position.y, 0f);
-//    }
-//}
+
+

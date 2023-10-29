@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Ball.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Single player.unity
+    guid: 4f08ce27b66d4624b9bea9cb064ab666
+  - enabled: 1
+    path: Assets/Scenes/Two players.unity
+    guid: 55d24fd00bb497845906c87b752b13ad
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: a35d170225452564a9bcdb21c5b2f5ee
+  - enabled: 1
+    path: Assets/Scenes/Secret mode.unity
+    guid: d497cda3bdbfc4d469215903b38f4438
   m_configObjects: {}
